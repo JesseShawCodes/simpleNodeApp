@@ -1,3 +1,4 @@
+var socket = io()
 $(() => {
     $("#send").click(()=>{
         var message = {
