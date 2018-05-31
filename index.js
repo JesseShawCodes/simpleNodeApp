@@ -10,6 +10,8 @@ $(() => {
     getMessages()
 })
 
+socket.on('message', addMessages)
+
 function addMessages(message) {
     $("#messages").append(`
         <section class="message">
@@ -28,5 +30,5 @@ function getMessages() {
 function postMessage(message) {
     console.log(message);
     $.post("http://localhost:3000/messages", message)
-    .then(addMessages(message))
+    // .then(addMessages(message))
 }
